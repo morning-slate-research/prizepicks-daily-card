@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <meta http-equiv="refresh" content="300">
+  <title>PrizePicks Daily Card</title>
+  <style>
+    :root {
+      --ink: #eef1ec;
+      --muted: #a5aea5;
+      --canvas: #111512;
+      --surface: #181e19;
+      --surface-raised: #202820;
+      --line: #344035;
+      --lime: #c8ef67;
+      --lime-ink: #1d2b04;
+      --amber: #ffcb72;
+      --red: #ff9988;
+      --blue: #87c6e8;
+      --radius: 14px;
+    }
+    * { box-sizing: border-box; }
+    html { background: var(--canvas); }
+    body {
+      margin: 0; min-width: 320px; color: var(--ink); background: var(--canvas);
+      font-family: Georgia, 'Times New Roman', serif; line-height: 1.45;
+    }
+    .shell { max-width: 1220px; margin: 0 auto; padding: 30px 24px 64px; }
+    .topbar {
+      display: flex; align-items: end; justify-content: space-between; gap: 24px;
+      padding-bottom: 22px; border-bottom: 1px solid var(--line);
+    }
+    .eyebrow, .section-kicker, .tag, .status, .updated {
+      font-family: 'Trebuchet MS', Arial, sans-serif; font-size: 11px; font-weight: 700;
+      letter-spacing: .12em; text-transform: uppercase;
+    }
+    .eyebrow { margin: 0 0 8px; color: var(--lime); }
+    h1 { margin: 0; font-size: clamp(30px, 5vw, 48px); letter-spacing: -.045em; line-height: .98; }
+    .updated { margin: 0; color: var(--muted); text-align: right; line-height: 1.55; }
+    .status {
+      display: inline-flex; align-items: center; gap: 8px; padding: 7px 9px;
+      border: 1px solid #4b5e31; color: var(--lime); background: #1a2511; border-radius: 999px;
+    }
+    .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--lime); box-shadow: 0 0 0 3px #c8ef6722; }
+    .notice {
+      margin: 24px 0; padding: 15px 17px; border: 1px solid #53613e; border-radius: var(--radius);
+      background: #1b2215; color: #dce8c6;
+    }
+    .notice strong { color: var(--lime); }
+    .grid { display: grid; grid-template-columns: minmax(0, 1.6fr) minmax(290px, .8fr); gap: 22px; }
+    .stack { display: grid; gap: 22px; }
+    .panel { border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); overflow: hidden; }
+    .panel-head { padding: 18px 19px 14px; border-bottom: 1px solid var(--line); }
+    .panel-head h2 { margin: 3px 0 0; font-size: 22px; letter-spacing: -.025em; }
+    .section-kicker { margin: 0; color: var(--muted); }
+    .empty { padding: 28px 19px 30px; color: var(--muted); }
+    .empty p { max-width: 55ch; margin: 0 0 15px; }
+    .empty code { color: var(--ink); font-family: 'Trebuchet MS', Arial, sans-serif; }
+    .leans { width: 100%; border-collapse: collapse; font-family: 'Trebuchet MS', Arial, sans-serif; font-size: 14px; }
+    .leans th { padding: 12px 19px; text-align: left; color: var(--muted); font-size: 10px; letter-spacing: .1em; text-transform: uppercase; }
+    .leans td { padding: 15px 19px; border-top: 1px solid var(--line); vertical-align: top; }
+    .leans .pick { font-family: Georgia, 'Times New Roman', serif; font-size: 16px; color: var(--ink); }
+    .confidence { display: inline-block; padding: 4px 6px; border-radius: 4px; font-size: 10px; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; }
+    .confidence.high { color: var(--lime); background: #c8ef6715; }
+    .confidence.medium { color: var(--amber); background: #ffcb7215; }
+    .confidence.low { color: var(--red); background: #ff998815; }
+    .reason { color: var(--muted); }
+    .cards { display: grid; gap: 0; }
+    .card { padding: 17px 19px; border-top: 1px solid var(--line); }
+    .card:first-child { border-top: 0; }
+    .card-top { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+    .card h3 { margin: 0; font-size: 18px; letter-spacing: -.015em; }
+    .tag { color: var(--lime); }
+    .card ol { margin: 10px 0 0 20px; padding: 0; color: #d7ddd5; }
+    .card .note { margin: 10px 0 0; color: var(--muted); font-family: 'Trebuchet MS', Arial, sans-serif; font-size: 13px; }
+    .side-body { padding: 17px 19px; font-family: 'Trebuchet MS', Arial, sans-serif; font-size: 14px; }
+    .side-body ul { margin: 0; padding-left: 18px; color: var(--muted); }
+    .side-body li + li { margin-top: 10px; }
+    .sources { display: grid; gap: 9px; }
+    .source { display: block; padding: 11px 12px; border: 1px solid var(--line); border-radius: 8px; color: var(--blue); text-decoration: none; }
+    .source:hover, .source:focus { outline: none; border-color: var(--blue); background: #87c6e80d; }
+    footer { margin-top: 22px; padding-top: 16px; border-top: 1px solid var(--line); color: var(--muted); font-family: 'Trebuchet MS', Arial, sans-serif; font-size: 12px; }
+    @media (max-width: 800px) {
+      .shell { padding: 22px 14px 42px; }
+      .topbar, .grid { display: grid; grid-template-columns: 1fr; }
+      .updated { text-align: left; }
+      .leans th:nth-child(3), .leans td:nth-child(3) { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">Houston market · America/Chicago</p>
+        <h1>PrizePicks<br>Daily Card</h1>
+      </div>
+      <div class="updated">
+        <span class="status"><span class="dot"></span> Awaiting morning refresh</span><br>
+        Daily report scheduled for 9:00 AM CT
+      </div>
+    </header>
+
+    <section class="notice" aria-label="Board status">
+      <strong>Board status:</strong> This dashboard will be updated by the daily research agent. If the live PrizePicks board cannot be verified for your Houston account, send a screenshot or paste the available projections in Telegram for a board-specific card.
+    </section>
+
+    <div class="grid">
+      <div class="stack">
+        <section class="panel">
+          <div class="panel-head"><p class="section-kicker">Strongest leans</p><h2>Waiting on current lines</h2></div>
+          <div class="empty">
+            <p>The first live card will replace this placeholder after the 9:00 AM Central research cycle.</p>
+            <p>No player props, odds, projections, or results are shown until they can be researched and timestamped.</p>
+          </div>
+        </section>
+
+        <section class="panel">
+          <div class="panel-head"><p class="section-kicker">Entry construction</p><h2>2–6 pick cards</h2></div>
+          <div class="empty">
+            <p>The daily card will identify the strongest 2-pick option first, then show 3-, 4-, 5-, and 6-pick versions only when additional legs are supported—not simply to fill a larger card.</p>
+          </div>
+        </section>
+      </div>
+
+      <aside class="stack">
+        <section class="panel">
+          <div class="panel-head"><p class="section-kicker">Research coverage</p><h2>Slate & late news</h2></div>
+          <div class="side-body"><ul><li>NBA, NFL, and MLB only when games are scheduled.</li><li>Lineups, injuries, starters, role changes, weather, and key matchup context.</li><li>Late-news and projection-movement risks labeled clearly.</li></ul></div>
+        </section>
+        <section class="panel">
+          <div class="panel-head"><p class="section-kicker">How to use this</p><h2>Best workflow</h2></div>
+          <div class="side-body"><ul><li>Open this file after 9:00 AM Central.</li><li>Refresh the page if it was already open; it also refreshes automatically every five minutes.</li><li>For exact selections, send the board you see in PrizePicks.</li></ul></div>
+        </section>
+      </aside>
+    </div>
+
+    <footer>Informational research only. Player props involve uncertainty; no outcome is guaranteed.</footer>
+  </main>
+</body>
+</html>
