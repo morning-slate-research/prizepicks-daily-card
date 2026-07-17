@@ -5,97 +5,112 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="dark">
   <meta http-equiv="refresh" content="300">
-  <title>PrizePicks Daily Card · July 16, 2026</title>
+  <title>PrizePicks Daily Card · July 17, 2026</title>
   <style>
     :root { --ink:#eef1ec; --muted:#a5aea5; --canvas:#111512; --surface:#181e19; --surface-raised:#202820; --line:#344035; --lime:#c8ef67; --lime-ink:#1d2b04; --amber:#ffcb72; --red:#ff9988; --blue:#87c6e8; --radius:14px; }
-    * { box-sizing:border-box; } html { background:var(--canvas); }
-    body { margin:0; min-width:320px; color:var(--ink); background:var(--canvas); font-family:Georgia,'Times New Roman',serif; line-height:1.45; }
-    .shell { max-width:1220px; margin:0 auto; padding:30px 24px 64px; }
-    .topbar { display:flex; align-items:end; justify-content:space-between; gap:24px; padding-bottom:22px; border-bottom:1px solid var(--line); }
-    .eyebrow,.section-kicker,.tag,.status,.updated { font-family:'Trebuchet MS',Arial,sans-serif; font-size:11px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; }
-    .eyebrow { margin:0 0 8px; color:var(--lime); } h1 { margin:0; font-size:clamp(30px,5vw,48px); letter-spacing:-.045em; line-height:.98; }
-    .updated { margin:0; color:var(--muted); text-align:right; line-height:1.55; }
-    .status { display:inline-flex; align-items:center; gap:8px; padding:7px 9px; border:1px solid #695630; color:var(--amber); background:#281f11; border-radius:999px; }
-    .dot { width:7px; height:7px; border-radius:50%; background:var(--amber); box-shadow:0 0 0 3px #ffcb7222; }
-    .notice { margin:24px 0; padding:15px 17px; border:1px solid #745d32; border-radius:var(--radius); background:#251e12; color:#f2dfba; }
-    .notice strong { color:var(--amber); } .notice p { margin:6px 0 0; }
-    .grid { display:grid; grid-template-columns:minmax(0,1.6fr) minmax(290px,.8fr); gap:22px; }.stack { display:grid; gap:22px; }
-    .panel { border:1px solid var(--line); border-radius:var(--radius); background:var(--surface); overflow:hidden; }.panel-head { padding:18px 19px 14px; border-bottom:1px solid var(--line); }.panel-head h2 { margin:3px 0 0; font-size:22px; letter-spacing:-.025em; }.section-kicker { margin:0; color:var(--muted); }
-    .empty { padding:21px 19px; color:var(--muted); }.empty p { max-width:66ch; margin:0 0 12px; }.empty p:last-child { margin-bottom:0; }
+    * { box-sizing:border-box; } html { background:var(--canvas); } body { margin:0; min-width:320px; color:var(--ink); background:var(--canvas); font-family:Georgia,'Times New Roman',serif; line-height:1.45; }
+    .shell { max-width:1220px; margin:0 auto; padding:30px 24px 64px; } .topbar { display:flex; align-items:end; justify-content:space-between; gap:24px; padding-bottom:22px; border-bottom:1px solid var(--line); }
+    .eyebrow,.section-kicker,.tag,.status,.updated { font-family:'Trebuchet MS',Arial,sans-serif; font-size:11px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; } .eyebrow { margin:0 0 8px; color:var(--lime); } h1 { margin:0; font-size:clamp(30px,5vw,48px); letter-spacing:-.045em; line-height:.98; } .updated { margin:0; color:var(--muted); text-align:right; line-height:1.55; }
+    .status { display:inline-flex; align-items:center; gap:8px; padding:7px 9px; border:1px solid #695630; color:var(--amber); background:#281f11; border-radius:999px; } .dot { width:7px; height:7px; border-radius:50%; background:var(--amber); box-shadow:0 0 0 3px #ffcb7222; }
+    .notice { margin:24px 0; padding:15px 17px; border:1px solid #745d32; border-radius:var(--radius); background:#251e12; color:#f2dfba; } .notice strong { color:var(--amber); } .notice p { margin:6px 0 0; }
+    .grid { display:grid; grid-template-columns:minmax(0,1.6fr) minmax(290px,.8fr); gap:22px; }.stack { display:grid; gap:22px; } .panel { border:1px solid var(--line); border-radius:var(--radius); background:var(--surface); overflow:hidden; }.panel-head { padding:18px 19px 14px; border-bottom:1px solid var(--line); }.panel-head h2 { margin:3px 0 0; font-size:22px; letter-spacing:-.025em; }.section-kicker { margin:0; color:var(--muted); }
+    .empty,.side-body { padding:17px 19px; font-family:'Trebuchet MS',Arial,sans-serif; font-size:14px; }.empty { color:var(--muted); }.empty p { max-width:70ch; margin:0 0 12px; }.empty p:last-child { margin-bottom:0; } .side-body ul { margin:0; padding-left:18px; color:var(--muted); }.side-body li+li { margin-top:10px; }.side-body strong { color:var(--ink); }
     .leans { width:100%; border-collapse:collapse; font-family:'Trebuchet MS',Arial,sans-serif; font-size:14px; }.leans th { padding:12px 19px; text-align:left; color:var(--muted); font-size:10px; letter-spacing:.1em; text-transform:uppercase; }.leans td { padding:15px 19px; border-top:1px solid var(--line); vertical-align:top; }.leans .pick { font-family:Georgia,'Times New Roman',serif; font-size:16px; color:var(--ink); }.reason { color:var(--muted); }
+    .schedule { width:100%; border-collapse:collapse; font-family:'Trebuchet MS',Arial,sans-serif; font-size:13px; }.schedule th { padding:10px 19px; text-align:left; color:var(--muted); font-size:10px; letter-spacing:.1em; text-transform:uppercase; }.schedule td { padding:10px 19px; border-top:1px solid var(--line); vertical-align:top; }.schedule .time { white-space:nowrap; color:var(--lime); font-weight:700; }.schedule .tbd { color:var(--amber); }
     .cards { display:grid; gap:0; }.card { padding:17px 19px; border-top:1px solid var(--line); }.card:first-child { border-top:0; }.card-top { display:flex; justify-content:space-between; align-items:baseline; gap:12px; }.card h3 { margin:0; font-size:18px; letter-spacing:-.015em; }.tag { color:var(--lime); }.card p { margin:9px 0 0; color:var(--muted); font-family:'Trebuchet MS',Arial,sans-serif; font-size:13px; }
-    .side-body { padding:17px 19px; font-family:'Trebuchet MS',Arial,sans-serif; font-size:14px; }.side-body ul { margin:0; padding-left:18px; color:var(--muted); }.side-body li+li { margin-top:10px; }.side-body strong { color:var(--ink); }
-    .sources { display:grid; gap:9px; }.source { display:block; padding:11px 12px; border:1px solid var(--line); border-radius:8px; color:var(--blue); text-decoration:none; }.source:hover,.source:focus { outline:none; border-color:var(--blue); background:#87c6e80d; }
-    .small { color:var(--muted); font-family:'Trebuchet MS',Arial,sans-serif; font-size:13px; } footer { margin-top:22px; padding-top:16px; border-top:1px solid var(--line); color:var(--muted); font-family:'Trebuchet MS',Arial,sans-serif; font-size:12px; }
-    @media (max-width:800px) { .shell { padding:22px 14px 42px; }.topbar,.grid { display:grid; grid-template-columns:1fr; }.updated { text-align:left; }.leans th:nth-child(3),.leans td:nth-child(3) { display:none; } }
+    .sources { display:grid; gap:9px; }.source { display:block; padding:11px 12px; border:1px solid var(--line); border-radius:8px; color:var(--blue); text-decoration:none; }.source:hover,.source:focus { outline:none; border-color:var(--blue); background:#87c6e80d; } footer { margin-top:22px; padding-top:16px; border-top:1px solid var(--line); color:var(--muted); font-family:'Trebuchet MS',Arial,sans-serif; font-size:12px; }
+    @media (max-width:800px) { .shell { padding:22px 14px 42px; }.topbar,.grid { display:grid; grid-template-columns:1fr; }.updated { text-align:left; }.schedule th:nth-child(3),.schedule td:nth-child(3) { display:none; } }
   </style>
 </head>
 <body>
   <main class="shell">
     <header class="topbar">
       <div><p class="eyebrow">Houston market · America/Chicago</p><h1>PrizePicks<br>Daily Card</h1></div>
-      <div class="updated"><span class="status"><span class="dot"></span> Board not verified</span><br>Thu, Jul 16, 2026 · 4:04 PM CDT</div>
+      <div class="updated"><span class="status"><span class="dot"></span> Board not verified</span><br>Fri, Jul 17, 2026 · 9:02 AM CDT</div>
     </header>
 
     <section class="notice" aria-label="Board status">
-      <strong>Board-specific picks are unavailable.</strong>
-      <p>PrizePicks’ public endpoint returned a JavaScript / anti-bot challenge, so neither projections nor Houston/Texas availability could be verified. Paste or screenshot the live board to receive exact More/Less analysis. No projection, pick, or card below is invented.</p>
+      <strong>Board-specific picks are unavailable—please paste or screenshot the Houston/Texas board.</strong>
+      <p>At 9:01 AM CDT, both PrizePicks’ public app and projections endpoint returned HTTP 403 / DataDome protection. I could not verify any live projection or Texas availability, so no player line, More/Less lean, or constructed entry below is invented.</p>
     </section>
 
     <div class="grid">
       <div class="stack">
         <section class="panel">
-          <div class="panel-head"><p class="section-kicker">Slate · MLB only</p><h2>One game: Mets at Phillies</h2></div>
-          <div class="side-body">
-            <ul>
-              <li><strong>5:10 PM CDT · Citizens Bank Park:</strong> New York Mets (40–57) at Philadelphia Phillies (54–43). NBA and NFL have no games on today’s official ESPN scoreboards.</li>
-              <li><strong>Listed probable starters:</strong> Christian Scott for New York; Aaron Nola for Philadelphia. These are listed probables—not a final lineup/pitch-count confirmation.</li>
-              <li><strong>Season context:</strong> Scott enters with a 3.17 ERA, 65 strikeouts and 54.0 innings across 12 starts; Nola has a 5.75 ERA, 102 strikeouts and 97.0 innings across 19 starts. Use only as context after matching an actual board line.</li>
-              <li><strong>Weather watch:</strong> the 5 PM CDT forecast near Citizens Bank Park was 30.8°C, 9% precipitation probability and 15.9 km/h wind from 231°; the 6 PM hour was 31.3°C, 15%, and 12.4 km/h from 216°. Forecasts can move—recheck before lock.</li>
-            </ul>
-          </div>
+          <div class="panel-head"><p class="section-kicker">Slate · MLB only</p><h2>15 games today · NBA 0 · NFL 0</h2></div>
+          <table class="schedule">
+            <thead><tr><th>CT</th><th>Matchup</th><th>Listed probable starters</th></tr></thead>
+            <tbody>
+              <tr><td class="time">12:35 PM</td><td>Rays @ Red Sox (DH G1)</td><td>Griffin Jax / Jake Bennett</td></tr>
+              <tr><td class="time">6:05 PM</td><td>Dodgers @ Yankees</td><td>Roki Sasaki / Gerrit Cole</td></tr>
+              <tr><td class="time">6:10 PM</td><td>Pirates @ Guardians</td><td>Jared Jones / Gavin Williams</td></tr>
+              <tr><td class="time">6:10 PM</td><td>Rays @ Red Sox (DH G2)</td><td class="tbd">TBD / TBD</td></tr>
+              <tr><td class="time">6:15 PM</td><td>Rangers @ Braves</td><td>Cal Quantrill / Chris Sale</td></tr>
+              <tr><td class="time">6:15 PM</td><td>White Sox @ Blue Jays</td><td>Anthony Kay / Spencer Miles</td></tr>
+              <tr><td class="time">6:40 PM</td><td>Marlins @ Brewers</td><td>Sandy Alcantara / Logan Henderson</td></tr>
+              <tr><td class="time">7:05 PM</td><td>Twins @ Cubs</td><td>Bailey Ober / Colin Rea</td></tr>
+              <tr><td class="time">7:10 PM</td><td>Orioles @ Astros</td><td>Dean Kremer / Peter Lambert</td></tr>
+              <tr><td class="time">7:10 PM</td><td>Padres @ Royals</td><td>Michael King / Seth Lugo</td></tr>
+              <tr><td class="time">7:40 PM</td><td>Reds @ Rockies</td><td>Brady Singer / Gabriel Hughes</td></tr>
+              <tr><td class="time">8:38 PM</td><td>Tigers @ Angels</td><td>Troy Melton / Reid Detmers</td></tr>
+              <tr><td class="time">8:40 PM</td><td>Nationals @ Athletics</td><td>Cade Cavalli / Gage Jump</td></tr>
+              <tr><td class="time">8:40 PM</td><td>Cardinals @ Diamondbacks</td><td class="tbd">TBD / Merrill Kelly</td></tr>
+              <tr><td class="time">9:10 PM</td><td>Giants @ Mariners</td><td>Landen Roupp / Bryce Miller</td></tr>
+            </tbody>
+          </table>
+          <div class="empty"><p><strong>Important:</strong> These are MLB’s listed probables at refresh, not confirmed starters, final batting orders, or pitch-count commitments. The Rays–Red Sox doubleheader and the two TBD starter spots are elevated role/lineup risk.</p></div>
         </section>
 
         <section class="panel">
           <div class="panel-head"><p class="section-kicker">Strongest leans</p><h2>No exact lines, no leans</h2></div>
           <table class="leans">
             <thead><tr><th>Player / stat</th><th>Projection</th><th>Decision-useful note</th></tr></thead>
-            <tbody><tr><td class="pick">Awaiting Jonathan’s board</td><td>Not verified</td><td class="reason">A player, stat type, and exact PrizePicks projection are required before a More/Less lean can be responsibly rated.</td></tr></tbody>
+            <tbody><tr><td class="pick">Awaiting Jonathan’s live board</td><td>Not verified</td><td class="reason">An exact current player/stat projection and market availability are required before a More/Less direction or confidence can be rated responsibly.</td></tr></tbody>
           </table>
         </section>
 
         <section class="panel">
           <div class="panel-head"><p class="section-kicker">Entry construction</p><h2>2–6 pick cards</h2></div>
           <div class="cards">
-            <article class="card"><div class="card-top"><h3>Best 2-pick</h3><span class="tag">Unavailable</span></div><p>Need two exact, visible projections; do not substitute season stats for lines.</p></article>
-            <article class="card"><div class="card-top"><h3>Best 3-pick</h3><span class="tag">Unavailable</span></div><p>Not constructed without verified projections and availability.</p></article>
-            <article class="card"><div class="card-top"><h3>Best 4-pick</h3><span class="tag">Unavailable</span></div><p>Not constructed. A smaller card is stronger than padding correlated or unverified legs.</p></article>
-            <article class="card"><div class="card-top"><h3>Best 5-pick</h3><span class="tag">Unavailable</span></div><p>Not constructed without a board and late-lineup confirmation.</p></article>
-            <article class="card"><div class="card-top"><h3>Best 6-pick</h3><span class="tag">Unavailable</span></div><p>Not constructed; today’s one-game MLB slate also limits independent leg selection.</p></article>
+            <article class="card"><div class="card-top"><h3>Best 2-pick</h3><span class="tag">Unavailable</span></div><p>No two verified projections. Send visible lines and this should be the first card evaluated.</p></article>
+            <article class="card"><div class="card-top"><h3>Best 3-pick</h3><span class="tag">Unavailable</span></div><p>Not constructed without board, lineup, and starter confirmation.</p></article>
+            <article class="card"><div class="card-top"><h3>Best 4-pick</h3><span class="tag">Unavailable</span></div><p>Not constructed. A smaller card is stronger than filling it with correlated or unverified legs.</p></article>
+            <article class="card"><div class="card-top"><h3>Best 5-pick</h3><span class="tag">Unavailable</span></div><p>Not constructed without current Houston-market availability.</p></article>
+            <article class="card"><div class="card-top"><h3>Best 6-pick</h3><span class="tag">Unavailable</span></div><p>Not constructed; more legs would add uncertainty without a verified board.</p></article>
           </div>
         </section>
       </div>
 
       <aside class="stack">
         <section class="panel">
-          <div class="panel-head"><p class="section-kicker">Wait / avoid</p><h2>Late-risk flags</h2></div>
+          <div class="panel-head"><p class="section-kicker">Context to use after lines arrive</p><h2>Matchup &amp; weather flags</h2></div>
           <div class="side-body"><ul>
-            <li><strong>Lineups:</strong> no official batting orders were verified in this refresh. Confirm starters and order before considering hitter props.</li>
-            <li><strong>Starters:</strong> Scott and Nola remain listed as probable, so any pitcher prop needs a final starter/pitch-count check.</li>
-            <li><strong>Weather:</strong> open-air park; recheck the Philadelphia forecast close to first pitch.</li>
-            <li><strong>Injury/role news:</strong> verify the final active roster and bullpen availability; do not infer playing time from the scheduled matchup.</li>
-            <li><strong>Board:</strong> availability and projections may differ by location and can change. Send the Houston board rather than relying on this context alone.</li>
+            <li><strong>Houston game:</strong> Orioles @ Astros is 7:10 PM CDT; Kremer and Lambert are only listed probables. Confirm both starters, batting orders, and any innings restriction before matching a pitcher or hitter line.</li>
+            <li><strong>Outdoor weather pulse (7 PM CDT forecast):</strong> Wrigley: 33.8°C / 93°F, 6% precip., 18.7 km/h wind at 254°; Coors: 33.8°C / 93°F, 2%, 18.7 km/h at 74°; Kauffman: 31.1°C / 88°F, 3%, 18.3 km/h at 212°; Truist: 27°C / 81°F, 14%, 4.5 km/h at 299°. Recheck near first pitch.</li>
+            <li><strong>Park/roof:</strong> Do not assume the operating status of retractable/covered venues (Toronto, Milwaukee, Houston, Arizona); it can materially change conditions.</li>
+            <li><strong>Lineups:</strong> At this morning refresh, no final batting orders or confirmed player availability were used. Avoid hitter props until lineup position is official.</li>
+          </ul></div>
+        </section>
+        <section class="panel">
+          <div class="panel-head"><p class="section-kicker">Wait / avoid</p><h2>Late-risk list</h2></div>
+          <div class="side-body"><ul>
+            <li><strong>Rays–Red Sox G2:</strong> listed starters are TBD; doubleheader workload can reshape the lineup and bullpen.</li>
+            <li><strong>Cardinals @ Diamondbacks:</strong> St. Louis starter is TBD.</li>
+            <li><strong>All pitcher props:</strong> wait for final starter and post-break pitch-count/innings signals; a listed probable is not a guarantee.</li>
+            <li><strong>All hitter props:</strong> wait for official batting order, scratch news, and roof/weather check.</li>
+            <li><strong>PrizePicks:</strong> availability and numbers can vary by market and move. Only evaluate a screenshot/copied Houston board.</li>
           </ul></div>
         </section>
         <section class="panel">
           <div class="panel-head"><p class="section-kicker">Source check</p><h2>Current references</h2></div>
           <div class="side-body sources">
-            <a class="source" href="https://www.mlb.com/schedule/2026-07-16" target="_blank" rel="noopener">MLB schedule · July 16</a>
-            <a class="source" href="https://www.mlb.com/gameday/mets-vs-phillies/2026/07/16/823440/preview" target="_blank" rel="noopener">MLB Gameday · Mets–Phillies preview</a>
-            <a class="source" href="https://site.api.espn.com/apis/site/v2/sports/baseball/mlb/scoreboard?dates=20260716&amp;limit=1000" target="_blank" rel="noopener">ESPN MLB scoreboard · July 16</a>
-            <a class="source" href="https://site.api.espn.com/apis/site/v2/sports/basketball/nba/scoreboard?dates=20260716" target="_blank" rel="noopener">ESPN NBA scoreboard · July 16</a>
-            <a class="source" href="https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=20260716" target="_blank" rel="noopener">ESPN NFL scoreboard · July 16</a>
-            <a class="source" href="https://api.open-meteo.com/v1/forecast?latitude=39.9061&amp;longitude=-75.1665&amp;hourly=temperature_2m,precipitation_probability,wind_speed_10m,wind_direction_10m&amp;timezone=America%2FChicago&amp;forecast_days=1" target="_blank" rel="noopener">Open-Meteo · Philadelphia hourly forecast</a>
+            <a class="source" href="https://statsapi.mlb.com/api/v1/schedule?sportId=1&amp;date=2026-07-17&amp;hydrate=probablePitcher,venue,weather" target="_blank" rel="noopener">MLB Stats API · schedule &amp; listed probables</a>
+            <a class="source" href="https://www.mlb.com/schedule/2026-07-17" target="_blank" rel="noopener">MLB.com · July 17 schedule</a>
+            <a class="source" href="https://site.api.espn.com/apis/site/v2/sports/baseball/mlb/scoreboard?dates=20260717&amp;limit=100" target="_blank" rel="noopener">ESPN · MLB scoreboard</a>
+            <a class="source" href="https://site.api.espn.com/apis/site/v2/sports/basketball/nba/scoreboard?dates=20260717&amp;limit=100" target="_blank" rel="noopener">ESPN · NBA scoreboard (0 events)</a>
+            <a class="source" href="https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=20260717&amp;limit=100" target="_blank" rel="noopener">ESPN · NFL scoreboard (0 events)</a>
+            <a class="source" href="https://api.open-meteo.com/v1/forecast?latitude=41.9484&amp;longitude=-87.6553&amp;hourly=temperature_2m,precipitation_probability,wind_speed_10m,wind_direction_10m&amp;timezone=America%2FChicago&amp;forecast_days=2" target="_blank" rel="noopener">Open-Meteo · Wrigley hourly forecast</a>
+            <a class="source" href="https://app.prizepicks.com/" target="_blank" rel="noopener">PrizePicks · board access required</a>
           </div>
         </section>
       </aside>
