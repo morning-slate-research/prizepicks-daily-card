@@ -14,7 +14,7 @@
     .status { display:inline-flex; align-items:center; gap:8px; padding:7px 9px; border:1px solid #695630; color:var(--amber); background:#281f11; border-radius:999px; } .dot { width:7px; height:7px; border-radius:50%; background:var(--amber); box-shadow:0 0 0 3px #ffcb7222; }
     .notice { margin:24px 0; padding:15px 17px; border:1px solid #745d32; border-radius:var(--radius); background:#251e12; color:#f2dfba; } .notice strong { color:var(--amber); } .notice p { margin:6px 0 0; }
     .grid { display:grid; grid-template-columns:minmax(0,1.6fr) minmax(290px,.8fr); gap:22px; }.stack { display:grid; gap:22px; } .panel { border:1px solid var(--line); border-radius:var(--radius); background:var(--surface); overflow:hidden; }.panel-head { padding:18px 19px 14px; border-bottom:1px solid var(--line); }.panel-head h2 { margin:3px 0 0; font-size:22px; letter-spacing:-.025em; }.section-kicker { margin:0; color:var(--muted); }
-    .empty,.side-body { padding:17px 19px; font-family:'Trebuchet MS',Arial,sans-serif; font-size:14px; }.empty { color:var(--muted); }.empty p { max-width:75ch; margin:0 0 12px; }.empty p:last-child { margin-bottom:0; } .side-body ul { margin:0; padding-left:18px; color:var(--muted); }.side-body li+li { margin-top:10px; }.side-body strong { color:var(--ink); }
+    .empty,.side-body { padding:17px 19px; font-family:'Trebuchet MS',Arial,sans-serif; font-size:14px; }.empty { color:var(--muted); }.empty p { max-width:80ch; margin:0 0 12px; }.empty p:last-child { margin-bottom:0; } .side-body ul { margin:0; padding-left:18px; color:var(--muted); }.side-body li+li { margin-top:10px; }.side-body strong { color:var(--ink); }
     .leans,.schedule { width:100%; border-collapse:collapse; font-family:'Trebuchet MS',Arial,sans-serif; font-size:13px; }.leans th,.schedule th { padding:12px 19px; text-align:left; color:var(--muted); font-size:10px; letter-spacing:.1em; text-transform:uppercase; }.leans td,.schedule td { padding:11px 19px; border-top:1px solid var(--line); vertical-align:top; }.leans .pick { font-family:Georgia,'Times New Roman',serif; font-size:16px; color:var(--ink); }.reason { color:var(--muted); }.schedule .time { white-space:nowrap; color:var(--lime); font-weight:700; }
     .cards { display:grid; gap:0; }.card { padding:17px 19px; border-top:1px solid var(--line); }.card:first-child { border-top:0; }.card-top { display:flex; justify-content:space-between; align-items:baseline; gap:12px; }.card h3 { margin:0; font-size:18px; letter-spacing:-.015em; }.tag { color:var(--lime); }.card p { margin:9px 0 0; color:var(--muted); font-family:'Trebuchet MS',Arial,sans-serif; font-size:13px; }
     .sources { display:grid; gap:9px; }.source { display:block; padding:11px 12px; border:1px solid var(--line); border-radius:8px; color:var(--blue); text-decoration:none; }.source:hover,.source:focus { outline:none; border-color:var(--blue); background:#87c6e80d; } footer { margin-top:22px; padding-top:16px; border-top:1px solid var(--line); color:var(--muted); font-family:'Trebuchet MS',Arial,sans-serif; font-size:12px; }
@@ -25,20 +25,20 @@
   <main class="shell">
     <header class="topbar">
       <div><p class="eyebrow">Houston market · America/Chicago</p><h1>PrizePicks<br>Daily Card</h1></div>
-      <div class="updated"><span class="status"><span class="dot"></span> Texas board not verified</span><br>Sat, Jul 18, 2026 · 9:00 AM CDT</div>
+      <div class="updated"><span class="status"><span class="dot"></span> Texas board not verified</span><br>Sat, Jul 18, 2026 · 9:52 AM CDT</div>
     </header>
 
     <section class="notice" aria-label="Board status">
       <strong>Board-specific picks are unavailable—please paste or screenshot the Houston/Texas board.</strong>
-      <p><b>Required board refresh could not be completed:</b> the local authenticated browser/CDP connection at 127.0.0.1:9222 was unreachable at the scheduled refresh, so the app’s <i>Refresh Board</i> control could not be opened or pressed. A direct public app request also returned 403. No visible, post-refresh Texas projection or market availability was verified; therefore no player line, More/Less lean, confidence label, or entry is fabricated below.</p>
+      <p><b>Required board refresh status: not completed.</b> At 9:52 AM CDT, the configured local authenticated browser/CDP endpoint (127.0.0.1:9222) timed out during discovery, so PrizePicks could not be opened and its <i>Refresh Board</i> control could not be pressed. A non-authenticated public app request returned 403. No post-refresh Texas-visible projection, sport availability, or exact line was read. No More/Less lean or entry below is fabricated.</p>
     </section>
 
     <div class="grid">
       <div class="stack">
         <section class="panel">
-          <div class="panel-head"><p class="section-kicker">Today’s verified slate · MLB only</p><h2>16 MLB games · NBA 0 · NFL 0</h2></div>
+          <div class="panel-head"><p class="section-kicker">Live slate refresh · 9:52 AM CDT</p><h2>MLB: 16 games · NBA: 0 · NFL: 0</h2></div>
           <table class="schedule">
-            <thead><tr><th>CT</th><th>Matchup</th><th>Listed probable starters (subject to change)</th></tr></thead>
+            <thead><tr><th>CT</th><th>Matchup</th><th>Official listed probable starters</th></tr></thead>
             <tbody>
               <tr><td class="time">12:10 PM</td><td>Pirates @ Guardians — Game 1</td><td>Jared Jones / Gavin Williams</td></tr>
               <tr><td class="time">1:20 PM</td><td>Twins @ Cubs</td><td>Taj Bradley / Matthew Boyd</td></tr>
@@ -58,55 +58,55 @@
               <tr><td class="time">9:07 PM</td><td>Tigers @ Angels</td><td>Tarik Skubal / Grayson Rodriguez</td></tr>
             </tbody>
           </table>
-          <div class="empty"><p><strong>Schedule verification:</strong> MLB’s official schedule returned the 16 games above, including the Pittsburgh–Cleveland doubleheader. ESPN’s date-specific NBA and NFL scoreboards returned zero events. Listed starters are probables, not confirmations; no batting orders, scratches, weather readings, or pitch-count information is claimed confirmed at this 9 AM check.</p></div>
+          <div class="empty"><p><strong>Verified context:</strong> MLB’s live schedule showed 16 games, including a Pirates–Guardians doubleheader. The Game 1 Cleveland forecast field was partly cloudy, 89°F, with 14 mph out to right field; it is the only current game-weather field returned by the schedule at this check. The other games had no populated weather field in this response. MLB listed the pitchers above as <em>probables</em>, not confirmed starters. Official batting orders, late scratches, and pitch-count limits were not confirmed at 9:52 AM.</p><p>ESPN’s date-specific NBA and NFL scoreboards each returned zero events; neither league is covered today.</p></div>
         </section>
 
         <section class="panel">
           <div class="panel-head"><p class="section-kicker">Strongest individual leans</p><h2>No exact Texas projections, no leans</h2></div>
           <table class="leans">
-            <thead><tr><th>Player / stat</th><th>Exact line</th><th>Why no decision is issued</th></tr></thead>
-            <tbody><tr><td class="pick">Awaiting Jonathan’s visible board</td><td>Not verified</td><td class="reason">Without the player, stat type, and precise More/Less number displayed after a Texas-board refresh, matchup research cannot be responsibly converted into a prop decision. A generic projection feed or another market would not prove Houston availability.</td></tr></tbody>
+            <thead><tr><th>Player / stat</th><th>Exact line</th><th>Decision status</th></tr></thead>
+            <tbody><tr><td class="pick">Awaiting Jonathan’s visible board</td><td>Not verified</td><td class="reason">A player prop must be evaluated against the precise More/Less number actually available in the Houston/Texas session after refresh. Without that number and market eligibility, there is no evidence-based prop decision or confidence rating.</td></tr></tbody>
           </table>
         </section>
 
         <section class="panel">
           <div class="panel-head"><p class="section-kicker">Entry construction</p><h2>Best 2–6 pick cards</h2></div>
           <div class="cards">
-            <article class="card"><div class="card-top"><h3>Best 2-pick</h3><span class="tag">Unavailable</span></div><p>No two post-refresh Houston-verified projections. This is the first card to consider once lines arrive.</p></article>
+            <article class="card"><div class="card-top"><h3>Best 2-pick</h3><span class="tag">Unavailable</span></div><p>No two post-refresh Houston-verified projections are available. A smaller verified card is stronger once lines arrive.</p></article>
             <article class="card"><div class="card-top"><h3>Best 3-pick</h3><span class="tag">Unavailable</span></div><p>Not constructed without exact available numbers and late-news confirmation.</p></article>
-            <article class="card"><div class="card-top"><h3>Best 4-pick</h3><span class="tag">Unavailable</span></div><p>Not constructed. A smaller verified card is stronger than adding uncertain or correlated legs.</p></article>
-            <article class="card"><div class="card-top"><h3>Best 5-pick</h3><span class="tag">Unavailable</span></div><p>Not constructed without Texas-market lines.</p></article>
-            <article class="card"><div class="card-top"><h3>Best 6-pick</h3><span class="tag">Unavailable</span></div><p>Not constructed; more legs would only compound unavailable-board and late-lineup risk.</p></article>
+            <article class="card"><div class="card-top"><h3>Best 4-pick</h3><span class="tag">Unavailable</span></div><p>Not constructed; do not add uncertain or correlated legs simply to reach four selections.</p></article>
+            <article class="card"><div class="card-top"><h3>Best 5-pick</h3><span class="tag">Unavailable</span></div><p>Not constructed without Houston/Texas-market lines.</p></article>
+            <article class="card"><div class="card-top"><h3>Best 6-pick</h3><span class="tag">Unavailable</span></div><p>Not constructed; six unverified legs would compound board and late-lineup risk.</p></article>
           </div>
         </section>
       </div>
 
       <aside class="stack">
         <section class="panel">
-          <div class="panel-head"><p class="section-kicker">Decision-useful context</p><h2>What to check before acting</h2></div>
+          <div class="panel-head"><p class="section-kicker">Decision-useful context</p><h2>High-impact checks</h2></div>
           <div class="side-body"><ul>
-            <li><strong>Astros home game:</strong> Orioles @ Astros is scheduled for 3:10 PM CT at Daikin Park. Recheck both starting lineups, the roof/weather listing, and whether Rogers and Arrighetti remain the confirmed starters before evaluating any hitter or pitcher line.</li>
-            <li><strong>Doubleheader risk:</strong> Pirates–Guardians has Game 1 at 12:10 PM CT and Game 2 at 6:10 PM CT. Player availability and batting order can differ materially between games; the Game 2 Pirates starter was still TBD in the official schedule.</li>
-            <li><strong>Starter uncertainty:</strong> Every pitcher listed here is an official probable, not a guaranteed start. Avoid pitching outs/strikeouts until the game page and starter status are current near first pitch.</li>
-            <li><strong>No confirmed weather claim:</strong> Weather fields were not relied upon at this early refresh. For outdoor games, recheck delay/wind/temperature close to lock; roof/indoor status also needs a current check.</li>
+            <li><strong>Early weather / game environment:</strong> Pirates–Guardians Game 1 is the only schedule weather field currently populated: 89°F and 14 mph out to right. Recheck for changes near 12:10 PM CT; it is not a substitute for an exact prop line.</li>
+            <li><strong>Astros home game:</strong> Orioles @ Astros is scheduled for 3:10 PM CT, with Trevor Rogers and Spencer Arrighetti listed probable. Confirm both starters, lineups, and Daikin Park roof status before any hitter or pitcher evaluation.</li>
+            <li><strong>Doubleheader risk:</strong> Pittsburgh–Cleveland Game 2 is 6:10 PM CT; Pittsburgh’s listed starter remains TBD. Player availability and batting order can differ between games.</li>
+            <li><strong>Starter and lineup uncertainty:</strong> Do not treat listed probables as confirmed. Hitter plate-appearance expectation and pitcher workload need current lineup/starter confirmation closer to lock.</li>
           </ul></div>
         </section>
         <section class="panel">
           <div class="panel-head"><p class="section-kicker">Wait / avoid</p><h2>Late-risk list</h2></div>
           <div class="side-body"><ul>
-            <li><strong>Any unseen line:</strong> neither its exact number nor its Texas eligibility has been established.</li>
-            <li><strong>Pitcher props before confirmation:</strong> probables can change, and innings/pitch-count context is not yet verified.</li>
-            <li><strong>Hitter props before official batting orders:</strong> lineup slot and a late scratch directly affect plate-appearance expectation.</li>
-            <li><strong>Game 2 doubleheader props:</strong> wait for Game 2 lineup and the Pirates starter.</li>
-            <li><strong>Forced larger cards:</strong> do not fill 4–6 legs merely to reach a larger entry; no card is stronger until the board is visible.</li>
+            <li><strong>Any unseen line:</strong> its exact number and Texas availability were not established.</li>
+            <li><strong>Pitcher props before confirmation:</strong> starter changes and workload limits can invalidate the premise.</li>
+            <li><strong>Hitter props before batting orders:</strong> lineup slot, rest, and late scratches alter expected plate appearances.</li>
+            <li><strong>Game 2 doubleheader props:</strong> wait for the Pirates starter and both game-specific lineups.</li>
+            <li><strong>Forced larger cards:</strong> no 4–6-pick construction is stronger than a smaller card with verified lines.</li>
           </ul></div>
         </section>
         <section class="panel">
           <div class="panel-head"><p class="section-kicker">Source check</p><h2>Current references</h2></div>
           <div class="side-body sources">
-            <a class="source" href="https://statsapi.mlb.com/api/v1/schedule?sportId=1&amp;date=2026-07-18&amp;hydrate=probablePitcher,venue,weather,linescore" target="_blank" rel="noopener">MLB Stats API · July 18 schedule &amp; probable starters</a>
-            <a class="source" href="https://site.api.espn.com/apis/site/v2/sports/basketball/nba/scoreboard?dates=20260718&amp;limit=100" target="_blank" rel="noopener">ESPN · NBA July 18 scoreboard (0 events returned)</a>
-            <a class="source" href="https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=20260718&amp;limit=100" target="_blank" rel="noopener">ESPN · NFL July 18 scoreboard (0 events returned)</a>
+            <a class="source" href="https://statsapi.mlb.com/api/v1/schedule?sportId=1&amp;date=2026-07-18&amp;hydrate=probablePitcher,venue,weather,linescore" target="_blank" rel="noopener">MLB Stats API · July 18 schedule, probables &amp; weather fields</a>
+            <a class="source" href="https://site.api.espn.com/apis/site/v2/sports/basketball/nba/scoreboard?dates=20260718&amp;limit=100" target="_blank" rel="noopener">ESPN · NBA July 18 scoreboard (0 events)</a>
+            <a class="source" href="https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=20260718&amp;limit=100" target="_blank" rel="noopener">ESPN · NFL July 18 scoreboard (0 events)</a>
             <a class="source" href="https://app.prizepicks.com/" target="_blank" rel="noopener">PrizePicks · authenticated Houston board required</a>
           </div>
         </section>
